@@ -17,7 +17,11 @@ async function bootstrap() {
     forbidNonWhitelisted: true,
     })
   );
+
+  const PORT= process.env.PORT ?? 3000;
+
+  console.log('El puerto actual es el: ', PORT);
   
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(PORT);
 }
 bootstrap();
